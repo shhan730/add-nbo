@@ -21,8 +21,9 @@ int main(int argc, char* argv[]){
 
     uint32_t host_order_1 = htonl(net_order_1);
     uint32_t host_order_2 = htonl(net_order_2);
+    uint32_t sum = host_order_1 + host_order_2;
 
-    printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", host_order_1, host_order_1, host_order_2, host_order_2, host_order_1 + host_order_2);
+    printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", host_order_1, host_order_1, host_order_2, host_order_2, sum, sum);
 
     fclose(f2);
     fclose(f1);
